@@ -1,4 +1,5 @@
 export const ALL_PRODUCTS = "ALL_PRODUCTS";
+export const ADD_PRODUCTS_TO_CART = "ADD_PRODUCTS_TO_CART";
 
 
 

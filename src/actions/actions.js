@@ -30,7 +30,6 @@ export function getAllProducts() {
       
       })
       .catch((err) => {
-        console.log(err);
         if (err && err.config) {
           dispatch({
             type: types.ALL_PRODUCTS,
@@ -38,6 +37,15 @@ export function getAllProducts() {
           });
         }
       });
+  };
+}
+
+export function addProductsToCart(product) {
+  return (dispatch) => {
+    dispatch({
+      type: types.ADD_PRODUCTS_TO_CART,
+      product: product,
+    });
   };
 }
 

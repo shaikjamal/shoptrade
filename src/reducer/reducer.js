@@ -7,14 +7,18 @@ import * as types from "../constants/actionTypes";
 
 export const initialState = {
   allProducts: "",
+  cartProducts:[]
 };
 
 const reducer = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
       case types.ALL_PRODUCTS:
-        console.log(action,"A");
         draft.allProducts = action.allProducts;
+        break;
+
+      case types.ADD_PRODUCTS_TO_CART:
+        draft.cartProducts = [...state.cartProducts,...action.product];
         break;
     }
   });
